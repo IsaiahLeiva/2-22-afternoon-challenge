@@ -1,5 +1,7 @@
 import { ProxyState } from "../AppState.js"
+import { housesService } from "../Services/HousesService.js"
 import { Pop } from "../Utils/Pop.js"
+
 
 
 function _drawHouse() {
@@ -22,6 +24,7 @@ export class HouseController {
             document.getElementById('create-button').classList.remove('visually-hidden')
         } catch (error) {
             Pop.toast(error.message, 'error')
+            console.error(error);
         }
     }
 
