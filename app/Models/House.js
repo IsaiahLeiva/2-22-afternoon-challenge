@@ -8,6 +8,7 @@ export class House {
         this.year = year || ''
         this.price = price || ''
         this.imgUrl = imgUrl || ''
+        this.description = description || ''
     }
 
     get Template() {
@@ -21,7 +22,7 @@ export class House {
             <p>${this.description}</p>
             <p>$${this.price}</p>
             <div class="d-flex align-items-center">
-              <p class="m-0">Color:</p>
+              
             </div>
             <div class="text-end">
             <button class="btn btn-outline-warning" onclick="app.housesController.editHouse('${this.id}')"> Edit </button>
