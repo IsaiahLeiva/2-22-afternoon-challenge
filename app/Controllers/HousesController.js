@@ -28,6 +28,34 @@ export class HouseController {
         }
     }
 
+    async handleSubmit(id) {
+        try {
+            window.event.preventDefault()
+            let form = window.event.target
+            let rawData = {
+                bedrooms: form.bedrooms.value,
+                bathrooms: form.bathrooms.value,
+                levels: form.levels.value,
+                year: form.year.value,
+                price: form.price.value,
+                imgUrl: form.imgUrl.value,
+                description: form.description.value
+            }
+            if (!id) {
+                housesService.createHouse(rawData)
+            } else {
+                housesService.editHouse(rawData, id)
+            }
+            let modal = document.getElementById('new-listing')
+            form.reset()
+            bootstrap.Modal.getOrCreateInstance(modal).hide()
+            Pop.toast('Complete')
+        }
+        catch (error) {
+            Pop.toast(error.message, 'error')
+        }
+    }
+
     async deleteHouse(houseId) {
         try {
             if (await Pop.confirm()) {
