@@ -20,7 +20,7 @@ export class HouseController {
     async viewHouses() {
         try {
             await housesService.getAllHouses()
-            document.getElementById('modal-body-slot').innerHTML = getHouseForm()
+            // document.getElementById('modal-body-slot').innerHTML = getHouseForm()
             document.getElementById('create-button').classList.remove('visually-hidden')
         } catch (error) {
             Pop.toast(error.message, 'error')
@@ -62,7 +62,7 @@ export class HouseController {
                 await housesService.deleteHouse(houseId)
             }
         } catch (error) {
-            console.error(error)
+            // console.error(error)
             Pop.error(error)
         }
     }
