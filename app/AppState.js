@@ -13,6 +13,18 @@ const testCar = new Car(
     imgUrl: 'https://thiscatdoesnotexist.com'
   })
 
+const testHouse = new House(
+  {
+    bedrooms: 1,
+    bathrooms: 5,
+    levels: 3,
+    year: 1999,
+    price: 200000,
+    imgUrl: "https://markstewart.com/wp-content/uploads/2021/04/1_SB4-Front-View.jpg",
+    description: "This is a house",
+
+  })
+
 class AppState extends EventEmitter {
 
   // NOTE just adds intellisense to our cars array that lets our code know its an array of cars, not other things 
@@ -22,13 +34,6 @@ class AppState extends EventEmitter {
   houses = [testHouse]
 }
 
-const testHouse = new House(
-  {
-
-
-
-
-  })
 
 
 export const ProxyState = new Proxy(new AppState(), {
