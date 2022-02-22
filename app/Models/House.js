@@ -1,5 +1,4 @@
 
-
 export class House {
     constructor({ id, bedrooms, bathrooms, levels, year, price, imgUrl, description }) {
         this.id = id || ''

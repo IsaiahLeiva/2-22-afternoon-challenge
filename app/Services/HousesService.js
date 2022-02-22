@@ -31,5 +31,4 @@ class HousesService {
         ProxyState.houses = ProxyState.houses.filter(h => h.id != houseId)
     }
 
-
 }
