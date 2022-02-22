@@ -71,6 +71,5 @@ export class HouseController {
 }
 
 
-//TODO: asynce handle submit
 
 //TODO: editHouse
