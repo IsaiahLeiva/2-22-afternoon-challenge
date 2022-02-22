@@ -1,5 +1,5 @@
-import { ProxyState } from "../AppState"
-import { Pop } from "../Utils/Pop"
+import { ProxyState } from "../AppState.js"
+import { Pop } from "../Utils/Pop.js"
 
 
 function _drawHouse() {
@@ -28,7 +28,6 @@ export class HouseController {
 
 }
 
-//TODO: async viewHouses
 
 //TODO: asynce handle submit
 
