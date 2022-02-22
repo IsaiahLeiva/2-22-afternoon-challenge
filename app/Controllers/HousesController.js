@@ -28,6 +28,17 @@ export class HouseController {
         }
     }
 
+    async deleteHouse(houseId) {
+        try {
+            if (await Pop.confirm()) {
+                await housesService.deleteHouse(houseId)
+            }
+        } catch (error) {
+            console.error(error)
+            Pop.error(error)
+        }
+    }
+
 
 }
 
