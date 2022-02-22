@@ -13,17 +13,17 @@ const testCar = new Car(
     imgUrl: 'https://thiscatdoesnotexist.com'
   })
 
-const testHouse = new House(
-  {
-    bedrooms: 1,
-    bathrooms: 5,
-    levels: 3,
-    year: 1999,
-    price: 200000,
-    imgUrl: "https://markstewart.com/wp-content/uploads/2021/04/1_SB4-Front-View.jpg",
-    description: "This is a house",
+// const testHouse = new House(
+//   {
+//     bedrooms: 1,
+//     bathrooms: 5,
+//     levels: 3,
+//     year: 1999,
+//     price: 200000,
+//     imgUrl: "https://markstewart.com/wp-content/uploads/2021/04/1_SB4-Front-View.jpg",
+//     description: "This is a house",
 
-  })
+//   })
 
 class AppState extends EventEmitter {
 
@@ -31,7 +31,7 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Car').Car[]} */
   cars = [testCar]
 
-  houses = [testHouse]
+  houses = []
 }
 
 

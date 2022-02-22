@@ -1,13 +1,19 @@
 import { ProxyState } from "../AppState"
 
 
-function _draw() {
+function _drawHouse() {
     let template = ''
     ProxyState.houses.forEach(h => template += h.Template)
     document.getElementById('listings').innerHTML = template
 }
 
-//TODO: export housecontroller
+
+export class HouseController {
+    constructor() {
+        ProxyState.on('houses', _drawHouse)
+        console.log('HouseController loaded');
+    }
+}
 
 //TODO: async viewHouses
 
